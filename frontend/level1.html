@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gesture - Alphabet</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="bg-gray-50 flex flex-col min-h-screen">
+
+    <!-- Navbar -->
+    <header class="navbar">
+        <div class="container navbar-content">
+            <a href="home.html" class="back-link">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="19" y1="12" x2="5" y2="12"></line>
+                    <polyline points="12 19 5 12 12 5"></polyline>
+                </svg>
+                Levels
+            </a>
+            <span class="logo mx-auto">Gesture</span>
+            <div style="width: 70px;" id="progress-indicator" class="font-bold text-muted">A / Z</div>
+        </div>
+    </header>
+
+    <!-- Main Content Split Screen -->
+    <main class="split-layout container page-content">
+
+        <!-- Left Side: Learning Panel -->
+        <div class="learning-panel fade-in">
+            <div class="letter-display-container">
+                <h1 id="learning-letter" class="massive-letter">A</h1>
+            </div>
+
+            <div class="instruction-card">
+                <div class="instruction-img-container">
+                    <img id="learning-image" src="assets/AlphabetImages/A.jpg" alt="Sign for A"
+                        onerror="this.src='https://placehold.co/400x400/e2e8f0/6366f1?text=A'" class="instruction-img">
+                </div>
+                <div class="instruction-text-container">
+                    <h2 class="instruction-title">How to sign:</h2>
+                    <p id="learning-instruction" class="instruction-desc">Place your index finger on your thumb, hold
+                        your hand up vertically.</p>
+                </div>
+            </div>
+
+            <!-- Shown only at the end -->
+            <div id="finish-container" class="hidden finish-container text-center mt-4">
+                <h2>Great job! You learned all letters!</h2>
+                <a href="test1.html" class="btn btn-primary btn-lg mt-2">Start Alphabet Test</a>
+            </div>
+        </div>
+
+        <!-- Right Side: Webcam Panel -->
+        <div class="webcam-panel fade-in delay-1">
+            <div class="test-container" style="max-width: 100%;">
+                <div class="video-wrapper">
+                    <video id="webcam-video" autoplay playsinline muted></video>
+                    <div id="video-overlay" class="video-overlay">
+                        <p id="camera-status">Initializing camera...</p>
+                    </div>
+                </div>
+
+                <div class="feedback-area">
+                    <div class="detection-status">
+                        Detected Letter: <strong id="detected-letter" class="detected-letter-text">-</strong>
+                        <span id="match-feedback" class="match-feedback"></span>
+                    </div>
+
+                    <button id="btn-next-letter" class="btn btn-primary btn-lg mt-2" onclick="nextLetter()">
+                        Next Letter &rarr;
+                    </button>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/camera_utils/camera_utils.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/hands/hands.js" crossorigin="anonymous"></script>
+    <script src="JS/main.js"></script>
+    <script src="JS/webcam_alphabet.js"></script>
+</body>
+
+</html>

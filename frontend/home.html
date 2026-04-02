@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gesture - Levels</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="mesh-bg flex flex-col min-h-screen">
+
+    <!-- Navbar -->
+    <header class="navbar">
+        <div class="container navbar-content">
+            <a href="home.html" class="logo">Gesture</a>
+            <nav class="navbar-links">
+                <a href="home.html" class="nav-pill active">Learning Path</a>
+                <a href="profile.html" class="nav-pill">Profile</a>
+            </nav>
+            <div class="user-menu">
+                <a href="profile.html" style="text-decoration:none;">
+                    <span class="avatar">U</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container page-content">
+        <div class="page-header text-center fade-in">
+            <h1 style="color: #171a1d;">Learning Path</h1>
+            <p class="text-muted mt-1">Select a level to begin your sign language journey.</p>
+        </div>
+
+        <div class="levels-grid fade-in delay-1">
+
+            <!-- Level 1 (Unlocked) -->
+            <a href="level1.html" class="level-card unlocked">
+                <div class="level-card-content">
+                    <div class="level-badge">Level 1</div>
+                    <h2 class="level-title">Alphabet</h2>
+                    <p class="level-desc">Learn the 26 letters of the sign language alphabet.</p>
+                    <div class="level-status">
+                        <span class="status-indicator"></span> 0/26 Completed
+                    </div>
+                </div>
+                <div class="level-overlay">
+                    <span class="btn btn-outline">Start Learning</span>
+                </div>
+            </a>
+
+            <!-- Level 2 (Unlocked) -->
+            <a href="level2.html" class="level-card unlocked">
+                <div class="level-card-content">
+                    <div class="level-badge">Level 2</div>
+                    <h2 class="level-title">Numbers</h2>
+                    <p class="level-desc">Learn how to count from 0 to 9 in sign language.</p>
+                </div>
+                <div class="level-overlay">
+                    <span class="btn btn-outline">Start Learning</span>
+                </div>
+            </a>
+
+            <!-- Level 3 (Unlocked) -->
+            <a href="level3.html" class="level-card unlocked">
+                <div class="level-card-content">
+                    <div class="level-badge">Level 3</div>
+                    <h2 class="level-title">Words</h2>
+                    <p class="level-desc">Learn common everyday words in sign language.</p>
+                </div>
+                <div class="level-overlay">
+                    <span class="btn btn-outline">Start Learning</span>
+                </div>
+            </a>
+
+            <!-- Level 4 (Unlocked) -->
+            <a href="#" class="level-card unlocked">
+                <div class="level-card-content">
+                    <div class="level-badge">Level 4</div>
+                    <h2 class="level-title">Sentences</h2>
+                    <p class="level-desc">Construct full sentences and learn conversational sign language.</p>
+                </div>
+                <div class="level-overlay">
+                    <span class="btn btn-outline">Start Learning</span>
+                </div>
+            </a>
+
+        </div>
+    </main>
+
+    <script src="JS/main.js"></script>
+</body>
+
+</html>

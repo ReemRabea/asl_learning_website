@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gesture – My Profile</title>
+    <meta name="description" content="Sign in or create an account to view your Gesture profile, points, and progress.">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/profile.css">
+</head>
+
+<body class="mesh-bg flex flex-col min-h-screen">
+
+    <!-- Navbar -->
+    <header class="navbar">
+        <div class="container navbar-content">
+            <a href="home.html" class="logo">Gesture</a>
+            <nav class="navbar-links">
+                <a href="home.html" class="nav-pill">Learning Path</a>
+                <a href="profile.html" class="nav-pill active">Profile</a>
+            </nav>
+            <div class="user-menu">
+                <a href="login.html" style="text-decoration:none;">
+                    <span class="avatar" title="Sign in">?</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container page-content fade-in" id="profile-main">
+
+        <!-- ── No Account State ── -->
+        <section class="no-account-section" id="no-account-screen">
+            <div class="no-account-card">
+
+                <!-- Ghost avatar -->
+                <div class="no-account-avatar">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" fill="none"
+                        viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z" />
+                    </svg>
+                </div>
+
+                <h1 class="no-account-title">No Account Found</h1>
+                <p class="no-account-desc">
+                    Sign in or create a free account to track your progress,<br>
+                    earn points, and see your level completions.
+                </p>
+
+                <!-- What you'll unlock preview -->
+                <div class="no-account-preview">
+                    <div class="preview-item">
+                        <span class="preview-icon">⭐</span>
+                        <span>Track your points</span>
+                    </div>
+                    <div class="preview-item">
+                        <span class="preview-icon">🏆</span>
+                        <span>Level completion history</span>
+                    </div>
+                    <div class="preview-item">
+                        <span class="preview-icon">🔥</span>
+                        <span>Daily streaks</span>
+                    </div>
+                    <div class="preview-item">
+                        <span class="preview-icon">👋</span>
+                        <span>Signs learned counter</span>
+                    </div>
+                </div>
+
+                <!-- CTA buttons -->
+                <div class="no-account-actions">
+                    <a href="login.html" class="btn-profile-primary" id="btn-signin">
+                        Sign In
+                    </a>
+                    <a href="login.html?tab=signup" class="btn-profile-secondary" id="btn-signup">
+                        Create Account
+                    </a>
+                </div>
+
+            </div>
+        </section>
+
+        <!--
+            ── Logged-in profile sections (hidden for now, shown after backend auth) ──
+            These will be revealed by JS once a real user session is detected.
+        -->
+        <div id="profile-logged-in" class="hidden">
+
+            <!-- Profile Hero -->
+            <section class="profile-hero">
+                <div class="profile-avatar-wrap">
+                    <div class="profile-avatar-ring">
+                        <div class="profile-avatar-circle" id="profile-avatar-large">?</div>
+                    </div>
+                    <div class="profile-avatar-badge" title="Active learner">✦</div>
+                </div>
+                <div class="profile-info">
+                    <h1 class="profile-name" id="profile-name">—</h1>
+                    <p class="profile-email" id="profile-email">—</p>
+                    <div class="profile-tags">
+                        <span class="profile-tag">🤟 ASL Learner</span>
+                        <span class="profile-tag">🌱 Beginner</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Stats Row -->
+            <section class="stats-row">
+                <div class="stat-card">
+                    <div class="stat-icon">⭐</div>
+                    <div class="stat-value" id="stat-points-value">0</div>
+                    <div class="stat-label">Total Points</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">🏆</div>
+                    <div class="stat-value" id="stat-levels-value">0 / 4</div>
+                    <div class="stat-label">Levels Completed</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">🔥</div>
+                    <div class="stat-value" id="stat-streak-value">0</div>
+                    <div class="stat-label">Day Streak</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">👋</div>
+                    <div class="stat-value" id="stat-signs-value">0</div>
+                    <div class="stat-label">Signs Learned</div>
+                </div>
+            </section>
+
+            <!-- Level Progress -->
+            <section class="section-block">
+                <div class="section-heading">
+                    <h2 class="section-title-sm">Level Progress</h2>
+                    <p class="section-sub">Track your journey through each module</p>
+                </div>
+                <div class="level-progress-list">
+                    <div class="level-progress-card">
+                        <div class="lp-left">
+                            <div class="lp-badge">1</div>
+                            <div class="lp-info">
+                                <div class="lp-name">Alphabet</div>
+                                <div class="lp-detail">Learn all 26 ASL letters</div>
+                            </div>
+                        </div>
+                        <div class="lp-right">
+                            <div class="lp-progress-wrap">
+                                <div class="lp-progress-bar"><div class="lp-progress-fill" style="width:0%" id="lp-fill-1"></div></div>
+                                <span class="lp-percent" id="lp-pct-1">0 / 26</span>
+                            </div>
+                            <span class="lp-status lp-status--not-started" id="lp-status-1">Not Started</span>
+                        </div>
+                    </div>
+                    <div class="level-progress-card">
+                        <div class="lp-left">
+                            <div class="lp-badge">2</div>
+                            <div class="lp-info">
+                                <div class="lp-name">Numbers</div>
+                                <div class="lp-detail">Learn digits 0 – 9</div>
+                            </div>
+                        </div>
+                        <div class="lp-right">
+                            <div class="lp-progress-wrap">
+                                <div class="lp-progress-bar"><div class="lp-progress-fill" style="width:0%" id="lp-fill-2"></div></div>
+                                <span class="lp-percent" id="lp-pct-2">0 / 10</span>
+                            </div>
+                            <span class="lp-status lp-status--not-started" id="lp-status-2">Not Started</span>
+                        </div>
+                    </div>
+                    <div class="level-progress-card">
+                        <div class="lp-left">
+                            <div class="lp-badge">3</div>
+                            <div class="lp-info">
+                                <div class="lp-name">Words</div>
+                                <div class="lp-detail">Common everyday signs</div>
+                            </div>
+                        </div>
+                        <div class="lp-right">
+                            <div class="lp-progress-wrap">
+                                <div class="lp-progress-bar"><div class="lp-progress-fill" style="width:0%" id="lp-fill-3"></div></div>
+                                <span class="lp-percent" id="lp-pct-3">0 / 20</span>
+                            </div>
+                            <span class="lp-status lp-status--not-started" id="lp-status-3">Not Started</span>
+                        </div>
+                    </div>
+                    <div class="level-progress-card">
+                        <div class="lp-left">
+                            <div class="lp-badge">4</div>
+                            <div class="lp-info">
+                                <div class="lp-name">Sentences</div>
+                                <div class="lp-detail">Conversational sign language</div>
+                            </div>
+                        </div>
+                        <div class="lp-right">
+                            <div class="lp-progress-wrap">
+                                <div class="lp-progress-bar"><div class="lp-progress-fill" style="width:0%" id="lp-fill-4"></div></div>
+                                <span class="lp-percent" id="lp-pct-4">0 / 15</span>
+                            </div>
+                            <span class="lp-status lp-status--not-started" id="lp-status-4">Not Started</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Account Details -->
+            <section class="section-block">
+                <div class="section-heading">
+                    <h2 class="section-title-sm">Account Details</h2>
+                    <p class="section-sub">Your personal information</p>
+                </div>
+                <div class="account-card">
+                    <div class="account-row">
+                        <div class="account-field-label">Full Name</div>
+                        <div class="account-field-value" id="account-name">—</div>
+                    </div>
+                    <div class="account-divider"></div>
+                    <div class="account-row">
+                        <div class="account-field-label">Email Address</div>
+                        <div class="account-field-value" id="account-email">—</div>
+                    </div>
+                    <div class="account-divider"></div>
+                    <div class="account-row">
+                        <div class="account-field-label">Member Since</div>
+                        <div class="account-field-value" id="account-joined">—</div>
+                    </div>
+                </div>
+            </section>
+
+        </div><!-- end #profile-logged-in -->
+
+    </main>
+
+    <script src="JS/profile.js"></script>
+</body>
+
+</html>

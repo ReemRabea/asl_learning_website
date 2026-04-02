@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gesture - Test Alphabet</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="bg-gray-50 flex flex-col min-h-screen">
+
+    <!-- Navbar -->
+    <header class="navbar">
+        <div class="container navbar-content">
+            <a href="level1.html" class="back-link">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="19" y1="12" x2="5" y2="12"></line>
+                    <polyline points="12 19 5 12 12 5"></polyline>
+                </svg>
+                Alphabet
+            </a>
+            <span class="logo mx-auto">Gesture</span>
+            <div class="score-display">
+                Score: <span id="current-score" class="font-bold">0</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container page-content test-layout">
+
+        <div class="test-header text-center fade-in">
+            <h1 id="prompt-text" class="prompt-text">Show the sign for letter <span>...</span></h1>
+        </div>
+
+        <div class="test-container fade-in delay-1">
+            <div class="video-wrapper">
+                <video id="webcam-video" autoplay playsinline muted></video>
+                <div id="video-overlay" class="video-overlay">
+                    <p id="camera-status">Initializing camera...</p>
+                </div>
+                <!-- Detection Box (Placeholder for future ML) -->
+                <div class="detection-box hidden" id="detection-box">
+                    Detected: <strong id="detected-letter">A</strong>
+                </div>
+            </div>
+
+            <div class="feedback-area">
+                <div class="detection-status">
+                    Detected: <strong id="detected-letter">-</strong>
+                    <span id="match-feedback" class="match-feedback"></span>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/camera_utils/camera_utils.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/hands/hands.js" crossorigin="anonymous"></script>
+    <script src="JS/main.js"></script>
+    <script src="JS/webcam_alphabet.js"></script>
+</body>
+
+</html>

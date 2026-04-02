@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gesture - Learn Sign Language</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class="auth-wrapper">
+        <div class="auth-container fade-in">
+            <div class="auth-header">
+                <h1 class="auth-title">Gesture</h1>
+                <p class="auth-subtitle">Learn Sign Language</p>
+            </div>
+
+            <div class="auth-toggle">
+                <button class="auth-toggle-btn active" id="btn-signin">Sign In</button>
+                <button class="auth-toggle-btn" id="btn-signup">Sign Up</button>
+            </div>
+
+            <div class="auth-forms-container">
+                <!-- Sign In Form -->
+                <form id="form-signin" class="auth-form active">
+                    <div class="form-group">
+                        <label class="form-label" for="signin-email">Email</label>
+                        <input type="email" id="signin-email" class="form-input" placeholder="Enter your email"
+                            pattern="^[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}$"
+                            title="Please enter a valid email address (e.g., user@gmail.com)" required>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label" for="signin-password">Password</label>
+                        <input type="password" id="signin-password" class="form-input" placeholder="Enter your password"
+                            required>
+                    </div>
+                    <button type="submit" class="btn btn-primary mt-2">Sign In</button>
+                </form>
+
+                <!-- Sign Up Form -->
+                <form id="form-signup" class="auth-form slide-right">
+                    <div class="form-group" style="display: flex; gap: 1rem; margin-bottom: 1.5rem;">
+                        <div style="flex: 1; margin-bottom: 0;">
+                            <label class="form-label" for="signup-fname">First Name</label>
+                            <input type="text" id="signup-fname" class="form-input" placeholder="First Name" required>
+                        </div>
+                        <div style="flex: 1; margin-bottom: 0;">
+                            <label class="form-label" for="signup-lname">Last Name</label>
+                            <input type="text" id="signup-lname" class="form-input" placeholder="Last Name" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label" for="signup-email">Email</label>
+                        <input type="email" id="signup-email" class="form-input" placeholder="Enter your email"
+                            pattern="^[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}$"
+                            title="Please enter a valid email address (e.g., user@gmail.com)" required>
+                    </div>
+                    <!-- Row 3: Passwords -->
+                    <div class="form-group" style="display: flex; gap: 1rem; margin-bottom: 1.5rem;">
+                        <div style="flex: 1; margin-bottom: 0;">
+                            <label class="form-label" for="signup-password">Create Password</label>
+                            <input type="password" id="signup-password" class="form-input" placeholder="Create a password" required>
+                        </div>
+                        <div style="flex: 1; margin-bottom: 0;">
+                            <label class="form-label" for="signup-confirm-password">Confirm Password</label>
+                            <input type="password" id="signup-confirm-password" class="form-input" placeholder="Confirm your password" required>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-primary mt-2">Create Account</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="JS/main.js"></script>
+    <script src="JS/auth.js"></script>
+</body>
+
+</html>
