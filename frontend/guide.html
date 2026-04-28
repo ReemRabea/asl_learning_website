@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gesture - Culture & Etiquette Guide</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .guide-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .etiquette-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+        .etiquette-card {
+            background: white;
+            padding: 2rem;
+            border-radius: var(--radius-lg);
+            border: 1px solid var(--border-color);
+            transition: var(--transition-normal);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        .etiquette-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-lg);
+            border-color: var(--primary);
+        }
+        .etiquette-card.do {
+            border-top: 5px solid #10b981;
+        }
+        .etiquette-card.dont {
+            border-top: 5px solid #ef4444;
+        }
+        .card-icon {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            display: block;
+        }
+        .card-title {
+            font-weight: 700;
+            font-size: 1.25rem;
+            margin-bottom: 0.75rem;
+            font-family: 'Outfit', sans-serif;
+        }
+        .card-text {
+            color: var(--text-muted);
+            font-size: 1rem;
+            line-height: 1.5;
+        }
+        .hero-section {
+            background: linear-gradient(135deg, #14b8a6, #0d9488);
+            color: white;
+            padding: 4rem 2rem;
+            border-radius: var(--radius-xl);
+            text-align: center;
+            margin-bottom: 4rem;
+            box-shadow: 0 20px 40px rgba(13, 148, 136, 0.25);
+        }
+        .hero-section h1 { color: white; font-size: 3rem; margin-bottom: 1rem; }
+        .hero-section p { opacity: 0.95; font-size: 1.25rem; max-width: 700px; margin: 0 auto; }
+    </style>
+</head>
+<body class="mesh-bg flex flex-col min-h-screen">
+    <header class="navbar">
+        <div class="container navbar-content">
+            <a href="home.html" class="back-link">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
+                Levels
+            </a>
+            <span class="logo mx-auto">Gesture</span>
+            <div style="width: 70px;"></div>
+        </div>
+    </header>
+
+    <main class="container page-content fade-in">
+        <div class="guide-container">
+            <div class="hero-section">
+                <h1>Deaf Culture & Etiquette</h1>
+                <p>ASL is more than just hand signs; it's a rich culture. Here is how to be a respectful communicator.</p>
+            </div>
+
+            <section>
+                <h2 class="text-center">The Golden Rules</h2>
+                <div class="etiquette-grid">
+                    <div class="etiquette-card do">
+                        <span class="card-icon">👀</span>
+                        <div class="card-title">Maintain Eye Contact</div>
+                        <p class="card-text">Looking away is considered rude. In Deaf culture, eye contact signifies that you are listening.</p>
+                    </div>
+                    <div class="etiquette-card dont">
+                        <span class="card-icon">📢</span>
+                        <div class="card-title">Don't Shout</div>
+                        <p class="card-text">Shouting doesn't help most deaf people hear and can make your facial expressions look aggressive.</p>
+                    </div>
+                    <div class="etiquette-card do">
+                        <span class="card-icon">👋</span>
+                        <div class="card-title">Get Attention Properly</div>
+                        <p class="card-text">Tap them lightly on the shoulder or give a small wave from a distance. Avoid waving your hands in their face.</p>
+                    </div>
+                    <div class="etiquette-card dont">
+                        <span class="card-icon">🤐</span>
+                        <div class="card-title">Don't Cover Your Mouth</div>
+                        <p class="card-text">Many deaf people use lip-reading to supplement signing. Keep your face clear and visible at all times.</p>
+                    </div>
+                    <div class="etiquette-card do">
+                        <span class="card-icon">💡</span>
+                        <div class="card-title">Ensure Good Lighting</div>
+                        <p class="card-text">Sign in well-lit areas. If you're in a dark room, move to where your hands and face are clearly visible.</p>
+                    </div>
+                    <div class="etiquette-card dont">
+                        <span class="card-icon">🤝</span>
+                        <div class="card-title">Don't Talk to Interpreters</div>
+                        <p class="card-text">Always look at and talk directly to the deaf person, not the person interpreting for them.</p>
+                    </div>
+                    <div class="etiquette-card do">
+                        <span class="card-icon">📝</span>
+                        <div class="card-title">Use Visual Aids</div>
+                        <p class="card-text">If you're stuck, use a phone's notes app or a pen and paper. Visual communication is always better than no communication.</p>
+                    </div>
+                    <div class="etiquette-card dont">
+                        <span class="card-icon">🏃</span>
+                        <div class="card-title">Don't Walk Between Signers</div>
+                        <p class="card-text">If you must pass through two people signing, walk quickly. Don't stop to apologize as it's more distracting.</p>
+                    </div>
+                    <div class="etiquette-card do">
+                        <span class="card-icon">🗣️</span>
+                        <div class="card-title">Be Patient & Clear</div>
+                        <p class="card-text">Speak at a normal pace. If asked to repeat, do so patiently. It takes time for both sides to adjust!</p>
+                    </div>
+                    <div class="etiquette-card dont">
+                        <span class="card-icon">🙈</span>
+                        <div class="card-title">Don't Assume Lip Reading</div>
+                        <p class="card-text">Not all deaf people can lip-read perfectly. In fact, only about 30% of English can be understood through lips alone.</p>
+                    </div>
+                    <div class="etiquette-card do">
+                        <span class="card-icon">🧘</span>
+                        <div class="card-title">Keep a Clear Background</div>
+                        <p class="card-text">Avoid busy or cluttered backgrounds. A simple, solid-colored backdrop makes signs much easier to follow.</p>
+                    </div>
+                    <div class="etiquette-card dont">
+                        <span class="card-icon">🙅</span>
+                        <div class="card-title">Don't Turn Your Back</div>
+                        <p class="card-text">Never turn your back while someone is signing to you. It's equivalent to walking away while someone is talking.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section style="margin-top: 4rem;">
+                <div class="etiquette-card" style="border-left: 5px solid var(--primary); background: rgba(99, 102, 241, 0.03);">
+                    <h3 class="mb-2">Did you know?</h3>
+                    <p class="text-muted">Facial expressions and body language provide the "tone of voice" in ASL. A raised eyebrow can turn a statement into a question!</p>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <script src="JS/main.js"></script>
+</body>
+</html>
