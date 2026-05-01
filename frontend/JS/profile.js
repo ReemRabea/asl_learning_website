@@ -33,8 +33,8 @@ document.addEventListener("DOMContentLoaded", async () => {
             levels: [
                 { id: 1, total: 26, completed: 0 },
                 { id: 2, total: 10, completed: 0 },
-                { id: 3, total: 17, completed: 0 },
-                { id: 4, total: 9, completed: 0 }
+                { id: 3, total: 20, completed: 0 },
+                { id: 4, total: 15, completed: 0 }
             ]
         };
 
@@ -52,8 +52,8 @@ document.addEventListener("DOMContentLoaded", async () => {
                 
                 if (progressData.level1_completed) userProfile.levels[0].completed = 26;
                 if (progressData.level2_completed) userProfile.levels[1].completed = 10;
-                if (progressData.level3_completed) userProfile.levels[2].completed = 17;
-                if (progressData.level4_completed) userProfile.levels[3].completed = 9;
+                if (progressData.level3_completed) userProfile.levels[2].completed = 20;
+                if (progressData.level4_completed) userProfile.levels[3].completed = 15;
             } else if (res.status === 401 || res.status === 403) {
                 // Token invalid
                 localStorage.removeItem("token");
