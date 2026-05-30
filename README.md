@@ -2,6 +2,8 @@
 
 Gesture is a modern web application designed to help users learn American Sign Language (ASL) through interactive lessons and real-time hand gesture recognition.
 
+![Gesture App Screenshot](frontend/assets/Screenshot.png)
+
 ## 🚀 Features
 
 - **Interactive Learning Path**: Four levels covering the Alphabet, Numbers, Words, and Sentences.
