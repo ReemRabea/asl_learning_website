@@ -1,0 +1,46 @@
+Words Model Evaluation Results
+================================
+Test Accuracy: 97.30%
+
+Classification Report:
+                       precision    recall  f1-score   support
+
+                  all       1.00      1.00      1.00        14
+               before       1.00      0.97      0.98        33
+                black       1.00      0.95      0.97        19
+                 book       1.00      1.00      1.00        16
+                candy       0.82      0.90      0.86        20
+                chair       1.00      1.00      1.00        15
+              clothes       1.00      1.00      1.00        10
+             computer       0.97      1.00      0.99        38
+               cousin       0.93      0.93      0.93        27
+                 deaf       1.00      1.00      1.00        21
+                drink       0.97      0.97      0.97        38
+            excuse me       1.00      1.00      1.00         6
+                 fine       0.89      1.00      0.94        16
+                   go       1.00      1.00      1.00        27
+                 help       1.00      0.97      0.98        31
+            i am full       0.95      1.00      0.97        19
+            i am poor       1.00      1.00      1.00        15
+       i am surprised       1.00      1.00      1.00         8
+  i completely forget       1.00      1.00      1.00        14
+         i don't care       1.00      1.00      1.00        13
+           i doubt it       0.95      1.00      0.97        18
+            i want it       1.00      1.00      1.00        16
+            ice cream       1.00      1.00      1.00        15
+           im thirsty       1.00      0.94      0.97        18
+        keep in touch       1.00      1.00      1.00         9
+            last year       1.00      1.00      1.00        11
+         let me think       0.83      0.77      0.80        13
+     my stomach hurts       0.94      1.00      0.97        17
+                   no       1.00      1.00      1.00        25
+none of your business       1.00      0.93      0.97        15
+                 thin       1.00      0.93      0.96        27
+                 walk       0.91      0.95      0.93        21
+      we need to talk       1.00      1.00      1.00        12
+                  who       0.97      0.97      0.97        32
+                  yes       1.00      0.94      0.97        17
+
+             accuracy                           0.97       666
+            macro avg       0.98      0.97      0.97       666
+         weighted avg       0.97      0.97      0.97       666
